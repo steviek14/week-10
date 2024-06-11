@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shopping List</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class = "container">
+
+<h1>To-Do: Grocery Shopping
+    -----------------------
+</h1>
+<!--Bootstrap styled card to get user input for new grocery items-->
+    <div class = "card"> 
+        <div class ="card-body">
+            <div class ="row"> 
+                <div class="col-sm">
+                    <div class="form-group">
+                        <!--Form to enter new item-->
+                        <label for ="grocery-item-list">Grocery Item List</label>
+                        <input type="text" class="form-control" id="new-item" placeholder="Enter new item">
+                    </div>
+                </div>
+            </div>
+            <br>
+<!--Button to add grocery item to table-->
+            <button id="new-item-btn" class="btn btn-info">Add Grocery Item</button>
+            
+        </div>
+
+    </div>
+    <br>
+    <div>
+        <!--Bootstrap styled table - start of the table here - the user inputted data is done in JS-->
+        <table class="table table-striped table-info">
+            <thead id = 'headers'>
+                <th scope="col">Item</th>
+                <th scope="col">Delete Item</th>
+                <th scope="col">Check It Off!</th>
+            </thead>
+            <tbody id="grocery-list" class = "table table-hover">
+               
+            </tbody>
+        </table>
+    </div>
+    <!--Button to clear the table-->
+    <button id="clearList" class="btn btn-secondary">Clear</button>
+ 
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
